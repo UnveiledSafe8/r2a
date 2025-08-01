@@ -1,0 +1,5 @@
+addi x5, x0, 0
+lw x6, 0(x5)
+lui x7, 23
+sw x8, 0(x7)
+add x18, x8, x6
