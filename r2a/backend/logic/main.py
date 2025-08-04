@@ -36,9 +36,10 @@ def decode_binary_file(path):
         compressed = True
 
     with open("./output/output.s", "w") as file:
+        file.write(".section .text\n.globl _start\n\n_start:\n")
         for address, instr in decoded:
             if address in labels:
                 file.write(labels[address] + ":\n")
-            file.write(str(address) + ":\t" + instr + "\n")
+            file.write("\t" + instr + "\n")
 
-decode_binary_file("./test_binaries/test0.bin")
+decode_binary_file("./test_binaries/binaries/test1.bin")
