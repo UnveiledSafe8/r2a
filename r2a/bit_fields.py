@@ -19,6 +19,10 @@ class BitFieldDecoder:
         return self.get_bits(12, 14)
     
     @property
+    def rm(self):
+        return self.funct3
+    
+    @property
     def funct5(self):
         return self.get_bits(27, 31)
     
@@ -31,6 +35,22 @@ class BitFieldDecoder:
         return self.get_bits(25, 26)
     
     @property
+    def fmt(self):
+        return self.aqrl
+    
+    @property
+    def fm(self):
+        return self.get_bits(28, 31)
+    
+    @property
+    def pred(self):
+        return self.get_bits(24, 27)
+    
+    @property
+    def succ(self):
+        return self.get_bits(20, 23)
+    
+    @property
     def rd(self):
         return self.get_bits(7, 11)
     
@@ -41,6 +61,14 @@ class BitFieldDecoder:
     @property
     def rs2(self):
         return self.get_bits(20, 24)
+    
+    @property
+    def rs3(self):
+        return self.funct5
+    
+    @property
+    def csr(self):
+        return self.i_imm
     
     @property
     def i_imm(self):
