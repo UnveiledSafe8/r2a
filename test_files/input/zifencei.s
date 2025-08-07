@@ -10,7 +10,7 @@ _start:
     fence r, r
     fence rw, rw
 
-    fence i
+    fence.i
     fence.i
 
     fence rw, r
