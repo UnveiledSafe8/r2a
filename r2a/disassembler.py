@@ -1,4 +1,4 @@
-from .instruction import Instruction
+from .decoder import Decoder
 
 class Disassembler():
     def decode_binary_file(input_path, output_path):
@@ -20,7 +20,7 @@ class Disassembler():
                 raw_bytes = data[index-2:index+2]
                 compressed = True
 
-            instr = Instruction.from_binary(raw_bytes)
+            instr = Decoder(raw_bytes)
             command = instr.decode()
 
             if command == "unknown" and compressed:

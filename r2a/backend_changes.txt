@@ -1,10 +1,10 @@
 Housekeeping:
-1. Scalable Instruction Class - Better structure for mnemonic lookup, more generalized bitfield decoder
-2. Type checks and documentation
-3. Format library interface properly
+2. Clean decoding logic
+3. Type checks and documentation
+4. Format library interface properly
 
 Features:
-1. Finish F and D extensions
 2. More extensions
 3. Compressed support
-4. ELF Parsing
+4. CSV Parsing ISA
+5. ELF Parsing

@@ -16,3 +16,15 @@ _start:
     flt.s   x12, f1, f2
     feq.s   x13, f1, f2
     fle.s   x14, f1, f2
+    fadd.s  f4, f0, f1
+    fsub.s  f5, f0, f1
+    fmul.s  f6, f0, f1
+    fdiv.s  f7, f0, f1
+    fsqrt.s f8, f0
+    fcvt.s.w  f1, x10
+    fcvt.s.wu f2, x11
+    fcvt.w.s  x12, f0
+    fcvt.wu.s x13, f0
+    fclass.s x10, f0
+    fmv.x.w x11, f0
+    fmv.w.x f1, x11
